@@ -1,6 +1,7 @@
 .search-button {
-  margin: auto;
+  margin: 0 10px;
   justify-self: center;
   display: block;
   width: 150px;
+  height: 40px;
 }

@@ -1,0 +1,37 @@
+.movie-card {
+  max-width: 240px;
+  margin-bottom: 30px;
+}
+.author-text {
+  display: inline;
+}
+.info-section {
+  background-color: rgba(0, 0, 0, 0);
+  min-height: 80px;
+  max-height: 80px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.info-section-column {
+  max-width: 60%;
+}
+.movie-name {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.movie-genre {
+  font-size: 13px;
+}
+.movie-year {
+  border: 1px solid black;
+  width: 55px;
+  font-size: 13px;
+}
+.card {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
