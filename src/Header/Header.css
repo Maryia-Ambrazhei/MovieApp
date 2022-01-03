@@ -1,8 +1,9 @@
 .header-section {
-  padding: 25px 50px;
-  background-color: rgb(33, 33, 66);
+  padding: 25px 10%;
   width: 100%;
   font-size: 30px;
   color: #dc3545;
   text-align: left;
+  position: relative;
+  font-weight: bold;
 }

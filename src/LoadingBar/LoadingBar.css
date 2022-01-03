@@ -1,0 +1,61 @@
+.loading-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}
+@keyframes even-circles {
+  0% {
+    background-color: lightcoral;
+  }
+  20% {
+    background-color: lightseagreen;
+  }
+  40% {
+    background-color: lightslategrey;
+  }
+  60% {
+    background-color: lightpink;
+  }
+  80% {
+    background-color: lightgoldenrodyellow;
+  }
+  100% {
+    background-color: lightskyblue;
+  }
+}
+@keyframes odd-circles {
+  0% {
+    background-color: lightskyblue;
+  }
+  20% {
+    background-color: lightgoldenrodyellow;
+  }
+  40% {
+    background-color: lightpink;
+  }
+  60% {
+    background-color: lightslategrey;
+  }
+  80% {
+    background-color: lightseagreen;
+  }
+  100% {
+    background-color: lightcoral;
+  }
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: lightskyblue;
+}
+.circle:nth-child(even) {
+  animation: even-circles 5s infinite;
+}
+.circle:nth-child(odd) {
+  animation: odd-circles 5s infinite;
+}

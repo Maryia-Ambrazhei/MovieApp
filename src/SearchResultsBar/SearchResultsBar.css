@@ -1,0 +1,16 @@
+.search-results-bar {
+  background-color: rgb(33, 33, 66);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+}
+.search-results-options {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.search-results-text {
+  margin-left: 10px;
+}

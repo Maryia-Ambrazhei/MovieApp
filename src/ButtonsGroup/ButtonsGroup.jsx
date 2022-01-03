@@ -4,11 +4,11 @@ import Button from 'react-bootstrap/Button';
 
 import './ButtonsGroup.css';
 
-const ButtonsGroup = () => {
+const ButtonsGroup = ({ firstButton, secondButton }) => {
   return (
-    <ButtonGroup aria-label="Basic example">
-      <Button variant="danger">Left</Button>
-      <Button variant="danger">Middle</Button>
+    <ButtonGroup>
+      <Button variant="danger">{firstButton}</Button>
+      <Button variant="danger">{secondButton}</Button>
     </ButtonGroup>
   );
 };

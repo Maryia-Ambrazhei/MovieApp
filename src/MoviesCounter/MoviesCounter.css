@@ -1,0 +1,8 @@
+.movies-counter {
+  width: 50%;
+  text-align: left;
+  color: #dc3545;
+}
+.movies-counter-quantity {
+  margin-right: 10px;
+}
