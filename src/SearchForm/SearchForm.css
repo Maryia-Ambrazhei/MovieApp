@@ -2,6 +2,7 @@
   padding: 0 10%;
   width: 100%;
   position: relative;
+  height: 120px;
 }
 .search-section-row {
   margin: 0 auto 20px;
@@ -19,4 +20,15 @@
 .search-section-options {
   display: flex;
   align-items: center;
+}
+.form-input {
+  height: 40px;
+  width: 100%;
+}
+.search-button {
+  margin: 0 10px;
+  justify-self: center;
+  display: block;
+  width: 15%;
+  height: 40px;
 }

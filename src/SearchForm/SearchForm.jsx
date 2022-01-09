@@ -1,22 +1,32 @@
 import React from 'react';
-import FormInput from '../FormInput/FormInput.jsx';
-import SearchButton from '../SearchButton/SearchButton.jsx';
-import ButtonsGroup from '../ButtonsGroup/ButtonsGroup.jsx';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import './SearchForm.css';
 
-const SearchForm = ({ onChange, onClick, value }) => (
-  <div className="search-section">
-    <div className="search-section-row">
-      <FormInput value={value} onChange={onChange} onClick={onClick} />
+const SearchForm = ({ onChange, onSubmit }) => {
+  const handleSubmit = event => {
+    event.preventDefault();
+    onSubmit();
+  };
+  return (
+    <div className="search-section">
+      <Form className="form-input" onSubmit={handleSubmit}>
+        <div className="search-section-row">
+          <Form.Control
+            size="lg"
+            type="text"
+            placeholder="type something here"
+            onChange={onChange}
+          />
+        </div>
+        <div className="search-section-row">
+          <Button variant="danger" type="submit" className="search-button">
+            Submit
+          </Button>
+        </div>
+      </Form>
     </div>
-    <div className="search-section-row">
-      <div className="search-section-options">
-        <p className="search-section-text">Search by</p>
-        <ButtonsGroup firstButton="Title" secondButton="Genre" />
-      </div>
-      <SearchButton onClick={onClick} />
-    </div>
-  </div>
-);
+  );
+};
 
 export default SearchForm;

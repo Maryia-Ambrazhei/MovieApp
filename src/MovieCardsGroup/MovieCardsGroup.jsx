@@ -3,13 +3,21 @@ import MovieCard from '../MovieCard/MovieCard.jsx';
 import './MovieCardsGroup.css';
 
 const MovieCardsGroup = ({ movies }) => {
-  const searchResults = movies.results;
-  console.log(searchResults);
   return (
     <div className="results-section">
       <div className="movie-cards-group">
-        {movies.results.map(movie => (
-          <MovieCard title={movie.title} year={movie.year} imageURL={movie.image.url} />
+        {movies.map(movie => (
+          <MovieCard
+            key={movie.id}
+            title={movie.title}
+            vote={movie.vote_average}
+            year={movie.release_date ? movie.release_date.slice(0, 4) : 'N/A'}
+            imagePATH={
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+                : './notfound.jpg'
+            }
+          />
         ))}
       </div>
     </div>
