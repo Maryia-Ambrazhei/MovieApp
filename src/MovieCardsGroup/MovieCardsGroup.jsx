@@ -9,14 +9,10 @@ const MovieCardsGroup = ({ movies }) => {
         {movies.map(movie => (
           <MovieCard
             key={movie.id}
+            movieId={movie.id}
             title={movie.title}
-            vote={movie.vote_average}
             year={movie.release_date ? movie.release_date.slice(0, 4) : 'N/A'}
-            imagePATH={
-              movie.poster_path
-                ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
-                : './notfound.jpg'
-            }
+            imagePATH={movie.poster_path}
           />
         ))}
       </div>

@@ -2,22 +2,29 @@
   max-width: 240px;
   margin-bottom: 30px;
 }
+.movie-details-link {
+  text-decoration: none;
+  color: white;
+}
+.movie-details-link:hover {
+  cursor: pointer;
+  color: #dc3545;
+}
 .author-text {
   display: inline;
 }
 .info-section {
   background-color: rgba(0, 0, 0, 0);
-  min-height: 80px;
-  max-height: 80px;
-  color: white;
+  min-height: 60px;
+  max-height: 90px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
 }
-.info-section-column {
-  max-width: 70%;
+.info-section-column:first-child {
+  width: 70%;
 }
 .movie-name {
   font-size: 14px;
@@ -26,17 +33,19 @@
 .movie-genre {
   font-size: 12px;
 }
-.movie-year,
-.movie-rating {
-  border: 1px solid black;
-  width: 55px;
-  font-size: 13px;
-}
 .card {
   background-color: rgba(0, 0, 0, 0);
   border: none;
 }
-.movie-poster {
+.movie-poster-main {
   width: 240px;
   height: 360px;
+  object-fit: cover;
+}
+.save-icon {
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+.save-icon:hover {
+  color: #dc3545;
 }

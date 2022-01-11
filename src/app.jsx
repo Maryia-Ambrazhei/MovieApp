@@ -1,65 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import regeneratorRuntime from 'regenerator-runtime';
-import Header from './Header/Header.jsx';
-import SearchForm from './SearchForm/SearchForm.jsx';
-import SearchResultsBar from './SearchResultsBar/SearchResultsBar.jsx';
-import MovieCardsGroup from './MovieCardsGroup/MovieCardsGroup.jsx';
-import MoviesPagination from './MoviesPagination/MoviesPagination.jsx';
+import React from 'react';
+import SearchPage from './SearchPage.jsx';
+import MovieDetailsPage from './MovieDetailsPage.jsx';
+import { Outlet, Link } from 'react-router-dom';
 
-const App = () => {
-  const [searchValue, setSearchValue] = useState('');
-  const [movies, setMovies] = useState(null);
-  const [page, setPage] = useState(1);
-
-  function handleInputValueChange(event) {
-    setSearchValue(event.target.value);
-    console.log(event.target.value);
-  }
-
-  const handlePaginationClick = pageNumber => {
-    setPage(pageNumber);
-  };
-
-  const getMoviesList = value => {
-    const APIkey = 'a5bb8f3c75b62747ed81ad005cfcb02e';
-    console.log('api call');
-    console.log(value);
-    if (value === '') {
-      fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}&page=${page}`)
-        .then(stream => stream.json())
-        .then(movies => setMovies(movies));
-    } else {
-      fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${APIkey}&query=${value}&page=${page}`
-      )
-        .then(stream => stream.json())
-        .then(setMovies);
-    }
-  };
-  useEffect(() => {
-    getMoviesList(searchValue);
-    console.log(searchValue);
-  }, [page]);
-
-  return (
-    <div>
-      <div className="wrapper">
-        <Header />
-        <SearchForm onChange={handleInputValueChange} onSubmit={() => getMoviesList(searchValue)} />
-      </div>
-      {movies && (
-        <div>
-          <SearchResultsBar
-            quantity={movies.total_results}
-            currentPage={page}
-            lastPage={movies.total_pages > 500 ? 500 : movies.total_pages}
-            onPaginationClick={handlePaginationClick}
-          />
-          <MovieCardsGroup movies={movies.results} />
+const App = () => (
+  <div>
+    <nav className="navigation">
+      <div className="header-section">
+        <h1 className="app-name">moviepoisk</h1>
+        <div className="navigation-items-wrapper">
+          <Link className="navigation-item" to="/">
+            Search
+          </Link>
+          <Link className="navigation-item" to="movieDetails">
+            Details
+          </Link>
         </div>
-      )}
-    </div>
-  );
-};
+      </div>
+    </nav>
+    <Outlet />
+  </div>
+);
 
 export default App;
