@@ -42,10 +42,3 @@
   height: 360px;
   object-fit: cover;
 }
-.save-icon {
-  margin-bottom: 5px;
-  font-size: 25px;
-}
-.save-icon:hover {
-  color: #dc3545;
-}

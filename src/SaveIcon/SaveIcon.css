@@ -1,0 +1,10 @@
+.save-icon {
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+.save-icon:hover {
+  transform: scale(1.2);
+}
+.to-watch * {
+  color: #dc3545;
+}

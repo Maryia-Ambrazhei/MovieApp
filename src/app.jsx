@@ -1,6 +1,4 @@
 import React from 'react';
-import SearchPage from './SearchPage.jsx';
-import MovieDetailsPage from './MovieDetailsPage.jsx';
 import { Outlet, Link } from 'react-router-dom';
 
 const App = () => (
@@ -12,8 +10,8 @@ const App = () => (
           <Link className="navigation-item" to="/">
             Search
           </Link>
-          <Link className="navigation-item" to="movieDetails">
-            Details
+          <Link className="navigation-item" to="watchList">
+            WatchList
           </Link>
         </div>
       </div>

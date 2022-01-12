@@ -2,8 +2,8 @@
   background-color: #dc3545;
   color: white;
   border-radius: 0rem;
-  min-width: 53px;
-  font-size: 17px;
+  min-width: 45px;
+  font-size: 15px;
 }
 .pagination > *:last-child {
   border-top-right-radius: 0.25rem;
@@ -23,4 +23,7 @@
 }
 .pagination-wrapper {
   height: 40px;
+}
+.page-link {
+  padding: 6px;
 }
