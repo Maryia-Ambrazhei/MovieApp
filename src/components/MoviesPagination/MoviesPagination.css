@@ -2,7 +2,7 @@
   background-color: #dc3545;
   color: white;
   border-radius: 0rem;
-  min-width: 45px;
+  min-width: 43px;
   font-size: 15px;
 }
 .pagination > *:last-child {
@@ -26,4 +26,13 @@
 }
 .page-link {
   padding: 6px;
+}
+@media (max-width: 700px) {
+  .pagination * {
+    min-width: 33px;
+    font-size: 13px;
+  }
+  .page-link {
+    padding: 3px 1px;
+  }
 }

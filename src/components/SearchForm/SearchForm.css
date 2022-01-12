@@ -7,29 +7,13 @@
 .search-section-row {
   margin: 0 auto 20px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.search-section-text {
-  color: #dc3545;
-  margin: 0 10px;
-  font-weight: bold;
-}
-.search-section-options {
-  display: flex;
-  align-items: center;
-}
-.form-input {
-  height: 40px;
-
   width: 100%;
 }
 .search-button {
   margin: 0 10px;
   justify-self: center;
   display: block;
-  width: 15%;
+  width: 100px;
   height: 40px;
 }

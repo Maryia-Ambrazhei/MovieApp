@@ -10,7 +10,7 @@ const SearchForm = ({ onChange, onSubmit }) => {
   };
   return (
     <div className="search-section">
-      <Form className="form-input" onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <div className="search-section-row">
           <Form.Control
             size="lg"
