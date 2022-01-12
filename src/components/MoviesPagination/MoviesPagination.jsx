@@ -3,7 +3,7 @@ import Pagination from 'react-bootstrap/Pagination';
 import './MoviesPagination.css';
 
 const MoviesPagination = ({ currentPage, lastPage, onPaginationClick }) => {
-  const handleClick = pageNumber => {
+  const handleClick = (pageNumber) => {
     onPaginationClick(pageNumber);
   };
 
@@ -16,7 +16,7 @@ const MoviesPagination = ({ currentPage, lastPage, onPaginationClick }) => {
     if (isLast || currentPage === lastPage - 1) {
       start = lastPage - 4;
     }
-    const pagesArray = new Array();
+    const pagesArray = [];
     for (let a = start; a <= end; a += 1) {
       pagesArray.push(a);
     }
@@ -32,7 +32,7 @@ const MoviesPagination = ({ currentPage, lastPage, onPaginationClick }) => {
         <Pagination.Item disabled={isFirst} onClick={() => handleClick(currentPage - 1)}>
           {'<'}
         </Pagination.Item>
-        {getPagesArray().map(page => (
+        {getPagesArray().map((page) => (
           <Pagination.Item
             key={page}
             className="page-button"

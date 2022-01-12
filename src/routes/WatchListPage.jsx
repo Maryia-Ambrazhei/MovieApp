@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieCard from '../MovieCard/MovieCard.jsx';
+import MovieCard from '../components/MovieCard/MovieCard.jsx';
 import useWatchList from '../hooks/useWatchList.jsx';
 
 const WatchListPage = () => {

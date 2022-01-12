@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import './MovieCard.css';
 import SaveIcon from '../SaveIcon/SaveIcon.jsx';
-import useWatchList from '../hooks/useWatchList.jsx';
 
 const MovieCard = ({ title, year, imageURL, movieId, isInWatchList, toggleWatchList }) => (
   <Card className="movie-card">

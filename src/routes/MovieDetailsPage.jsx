@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import MovieDetailedCard from '../MovieDetailedCard/MovieDetailedCard.jsx';
+import MovieDetailedCard from '../components/MovieDetailedCard/MovieDetailedCard.jsx';
 
 const MovieDetailsPage = () => {
   const [movie, setMovie] = useState();

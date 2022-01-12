@@ -1,8 +1,8 @@
 import React from 'react';
 import MovieCard from '../MovieCard/MovieCard.jsx';
 import './MovieCardsGroup.css';
-import notFound from '../styles/notfound.jpg';
-import useWatchList from '../hooks/useWatchList.jsx';
+import notFound from '../../styles/notfound.jpg';
+import useWatchList from '../../hooks/useWatchList.jsx';
 
 const MovieCardsGroup = ({ movies }) => {
   const { checkIfInWatchList, removeFromWatchList, addToWatchList } = useWatchList();

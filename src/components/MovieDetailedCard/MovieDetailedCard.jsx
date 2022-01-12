@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieDetailedCard.css';
-import notFound from '../styles/notfound.jpg';
+import notFound from '../../styles/notfound.jpg';
 
 const MovieDetailedCard = ({ movie }) => {
   const releaseYear = movie.release_date.slice(0, 4);
