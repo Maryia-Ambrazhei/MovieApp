@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import regeneratorRuntime from 'regenerator-runtime';
 import './styles/main.css';
 import App from './app.jsx';
 import SearchPage from './routes/SearchPage.jsx';

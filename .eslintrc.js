@@ -12,5 +12,14 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: {},
+  rules: {
+    'object-curly-newline': [
+      'error',
+      {
+        ObjectPattern: { multiline: true },
+      },
+    ],
+    'react/prop-types': ['off'],
+    'no-use-before-define': ['error', { functions: false, classes: true, variables: false }],
+  },
 };

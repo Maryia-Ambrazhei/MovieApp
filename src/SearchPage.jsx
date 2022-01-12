@@ -22,10 +22,10 @@ const SearchPage = () => {
     if (value === '') {
       fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}&page=${page}`)
         .then((stream) => stream.json())
-        .then((movies) => setMovies(movies));
+        .then(() => setMovies(movies));
     } else {
       fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${APIkey}&query=${value}&page=${page}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${APIkey}&query=${value}&page=${page}`,
       )
         .then((stream) => stream.json())
         .then(setMovies);

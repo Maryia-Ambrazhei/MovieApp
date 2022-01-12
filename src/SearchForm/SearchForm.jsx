@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import './SearchForm.css';
 
 const SearchForm = ({ onChange, onSubmit }) => {
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     onSubmit();
   };
