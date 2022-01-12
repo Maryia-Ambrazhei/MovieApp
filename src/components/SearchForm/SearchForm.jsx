@@ -17,6 +17,7 @@ const SearchForm = ({ onChange, onSubmit }) => {
             type="text"
             placeholder="type something here"
             onChange={onChange}
+            className="form-input"
           />
         </div>
         <div className="search-section-row">
